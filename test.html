@@ -283,7 +283,102 @@
                             { text: "Designing how a page, form, or interface should look and feel", scores: { 'UX': 1 } },
                             { text: "Trying to find problems or mistakes in systems or features", scores: { 'Test': 1 } }
                         ]
+                    },
+                    {
+                        id: 6,
+                        text: "Which things have you done before (in school, work, or side projects)? (Select all that apply — at least one)",
+                        type: "experience",
+                        weight: 2.0,
+                        multiple: true,
+                        options: [
+                            { text: "Wrote a document, outline, or plan for a project", scores: { 'RE': 2 } },
+                            { text: "Helped keep files, folders, or naming consistent", scores: { 'CM': 2 } },
+                            { text: "Drew diagrams to explain how something should work", scores: { 'Design': 2 } },
+                            { text: "Sketched or imagined how a website or form should look", scores: { 'UX': 2 } },
+                            { text: "Tried to find bugs, test inputs, or recreate issues", scores: { 'Test': 2 } },
+                            { text: "Helped assign responsibilities or organize your team", scores: { 'Team Lead': 2 } }
+                        ]
+                    },
+                    {
+                        id: 7,
+                        text: "What do you enjoy doing? (Select all that apply — at least one)",
+                        type: "personality",
+                        weight: 1.5,
+                        multiple: true,
+                        options: [
+                            { text: "Catching small details others might miss", scores: { 'Test': 2 } },
+                            { text: "Planning visuals or structure for systems", scores: { 'Design': 1, 'UX': 1 } },
+                            { text: "Supporting team collaboration and goals", scores: { 'Team Lead': 2 } },
+                            { text: "Writing documents that explain things clearly", scores: { 'RE': 2 } },
+                            { text: "Making UIs simple and easy to use", scores: { 'UX': 2 } },
+                            { text: "Keeping files, notes, or shared content neat and easy to find", scores: { 'CM': 2 } }
+                        ]
+                    },
+                    {
+                        id: 8,
+                        text: "Which tools or platforms have you used before? (Select all that apply — at least one)",
+                        type: "experience",
+                        weight: 1.5,
+                        multiple: true,
+                        options: [
+                            { text: "Written instructions or shared notes for a group", scores: { 'RE': 1 } },
+                            { text: "Created visual layouts or slides for presentations", scores: { 'UX': 1 } },
+                            { text: "Managed files, folders, or versions in a group setting", scores: { 'CM': 1 } },
+                            { text: "Drew flowcharts or system diagrams", scores: { 'Design': 1 } },
+                            { text: "Logged issues, tested inputs, or helped verify results", scores: { 'Test': 1 } },
+                            { text: "Used lists or spreadsheets to help track team progress", scores: { 'Team Lead': 1 } }
+                        ]
+                    },
+                    {
+                        id: 9,
+                        text: "Which of these habits or behaviors describe you? (Select all that apply — at least one)",
+                        type: "personality",
+                        weight: 2.0,
+                        multiple: true,
+                        options: [
+                            { text: "I like helping teammates understand what needs to be done", scores: { 'RE': 2, 'Team Lead': 1 } },
+                            { text: "I enjoy organizing to-do lists, checklists, or shared folders", scores: { 'CM': 2, 'Team Lead': 1 } },
+                            { text: "I often notice when something in a design or interface feels off", scores: { 'UX': 2, 'Design': 1 } },
+                            { text: "I like thinking through “what if” scenarios or edge cases", scores: { 'Test': 2, 'Design': 1 } },
+                            { text: "I'm usually the one reminding others about what's due or what's left", scores: { 'Team Lead': 2, 'CM': 1 } },
+                            { text: "I often help by writing instructions or steps for others", scores: { 'RE': 2, 'CM': 1 } },
+                            { text: "I like imagining how an app or website should look on screen", scores: { 'UX': 2, 'Design': 1 } }
+                        ]
+                    },
+                    {
+                        id: 10,
+                        text: "When joining a new project team, what's your natural instinct?",
+                        type: "personality",
+                        weight: 2.0,
+                        options: [
+                            { text: "Help define the goals and scope", scores: { 'RE': 2 } },
+                            { text: "Take initiative to coordinate tasks", scores: { 'Team Lead': 2 } },
+                            { text: "Start planning the system's architecture", scores: { 'Design': 2 } }
+                        ]
+                    },
+                    {
+                        id: 11,
+                        text: "What do you usually contribute most in team work?",
+                        type: "skills",
+                        weight: 2.0,
+                        options: [
+                            { text: "Task planning or leading group discussions", scores: { 'Team Lead': 2 } },
+                            { text: "Writing up steps or requirements", scores: { 'RE': 2 } },
+                            { text: "Making screen layouts, diagrams, or presentation visuals", scores: { 'UX': 2 } }
+                        ]
+                    },
+                    {
+                        id: 12,
+                        text: "Which role do you enjoy most (if you've had team experience)?",
+                        type: "experience",
+                        weight: 2.5,
+                        options: [
+                            { text: "Spotting bugs and issues", scores: { 'Test': 2 } },
+                            { text: "Managing the setup and structure of workspaces", scores: { 'CM': 2 } },
+                            { text: "Building logical flows and diagrams", scores: { 'Design': 2 } }
+                        ]
                     }
+
                 ];
             }
 
