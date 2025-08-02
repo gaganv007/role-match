@@ -2114,11 +2114,11 @@ const RoleMatch = () => {
             <section style={{ backgroundColor: theme.elevation1, padding: '24px', borderRadius: '24px', boxShadow: '0 4px 16px rgba(0, 0, 0, 0.05)' }}>
               <h2 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '16px', color: theme.primary }}>Our Team</h2>
               <ul style={{ listStyle: 'none', padding: 0, color: theme.onSurfaceVariant }}>
-                <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Gagan Veginati</strong> - Software Designer and Developer</li>
-                <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Swamy Tuttagunta</strong> - Software Developer</li>
-                <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Yuqing Zheng</strong> - UX Developer</li>
-                <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Brady Wu</strong> - Software Tester</li>
-                <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Paul Mulroney</strong> - Project Manager</li>
+                <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Gagan Veginati</strong> - System Designer</li>
+                <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Swamy Tuttagunta</strong> - Configuration Manager</li>
+                <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Yuqing Zheng</strong> - UX Designer</li>
+                <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Brady Wu</strong> - QA Tester</li>
+                <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Paul Mulroney</strong> - Requirements Engineer</li>
               </ul>
             </section>
           </div>
