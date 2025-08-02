@@ -40,7 +40,7 @@ Try it out: https://rolematch.netlify.app/
 ## Team
 
 - **Gagan Veginati** - System Designer
-- **Swamy Tuttagunta** - Configuration Manager
+- **Swamy Tuttagunta** - Software Architect
 - **Yuqing Zheng** - UX Designer
 - **Brady Wu** - QA Tester
 - **Paul Mulroney** - Requirements Engineer
