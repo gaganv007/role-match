@@ -655,7 +655,242 @@ const RoleMatch = () => {
 
   const exportToPDF = () => {
     if (!results) return;
-    window.print();
+    
+    // Create a clean, printable version of the results
+    const printWindow = window.open('', '_blank');
+    const printContent = `
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>RoleMatch Results - ${studentInfo.firstName} ${studentInfo.lastName}</title>
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+            
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+            
+            body {
+              font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+              line-height: 1.6;
+              color: #1a1c1e;
+              background: #ffffff;
+              padding: 40px;
+              max-width: 800px;
+              margin: 0 auto;
+            }
+            
+            .header {
+              text-align: center;
+              margin-bottom: 40px;
+              padding-bottom: 20px;
+              border-bottom: 3px solid #006495;
+            }
+            
+            .header h1 {
+              font-size: 32px;
+              font-weight: 700;
+              color: #006495;
+              margin-bottom: 10px;
+            }
+            
+            .student-info {
+              font-size: 16px;
+              color: #43474e;
+              margin-bottom: 10px;
+            }
+            
+            .generated-date {
+              font-size: 14px;
+              color: #73777f;
+              font-style: italic;
+            }
+            
+            .results-section {
+              margin-top: 30px;
+            }
+            
+            .results-title {
+              font-size: 24px;
+              font-weight: 700;
+              color: #1a1c1e;
+              margin-bottom: 20px;
+            }
+            
+            .role-item {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 20px;
+              margin-bottom: 16px;
+              border-radius: 12px;
+              border: 2px solid #dfe2eb;
+              background: #fdfcff;
+            }
+            
+            .role-item.rank-1 {
+              border-color: #006495;
+              background: #c9e6ff;
+            }
+            
+            .role-item.rank-2 {
+              border-color: #525f6e;
+              background: #d5e3f5;
+            }
+            
+            .role-item.rank-3 {
+              border-color: #6a5778;
+              background: #f2daff;
+            }
+            
+            .role-info h3 {
+              font-size: 20px;
+              font-weight: 700;
+              color: #1a1c1e;
+              margin-bottom: 4px;
+            }
+            
+            .role-info .match-score {
+              font-size: 16px;
+              font-weight: 600;
+              color: #006495;
+            }
+            
+            .role-info .description {
+              font-size: 14px;
+              color: #43474e;
+              margin-top: 8px;
+            }
+            
+            .rank-badge {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              background: #006495;
+              color: white;
+              font-size: 24px;
+              font-weight: 700;
+            }
+            
+            .rank-1 .rank-badge {
+              background: #006495;
+            }
+            
+            .rank-2 .rank-badge {
+              background: #525f6e;
+            }
+            
+            .rank-3 .rank-badge {
+              background: #6a5778;
+            }
+            
+            .skills-section {
+              margin-top: 12px;
+            }
+            
+            .skills-title {
+              font-size: 14px;
+              font-weight: 600;
+              color: #43474e;
+              margin-bottom: 8px;
+            }
+            
+            .skills-list {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 6px;
+            }
+            
+            .skill-tag {
+              padding: 4px 12px;
+              background: #dfe2eb;
+              color: #43474e;
+              border-radius: 20px;
+              font-size: 12px;
+              font-weight: 500;
+            }
+            
+            .footer {
+              margin-top: 40px;
+              text-align: center;
+              padding-top: 20px;
+              border-top: 1px solid #dfe2eb;
+              color: #73777f;
+              font-size: 14px;
+            }
+            
+            @media print {
+              body {
+                padding: 20px;
+              }
+              
+              .header {
+                margin-bottom: 30px;
+              }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="header">
+            <h1>RoleMatch Assessment Results</h1>
+            <div class="student-info">
+              <strong>${studentInfo.firstName} ${studentInfo.lastName}</strong>
+            </div>
+            <div class="student-info">
+              BU ID: ${studentInfo.buId} • Email: ${studentInfo.email}
+            </div>
+            <div class="generated-date">
+              Generated on ${new Date().toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+              })}
+            </div>
+          </div>
+          
+          <div class="results-section">
+            <h2 class="results-title">Recommended Roles</h2>
+            ${results.recommendations.map(rec => `
+              <div class="role-item rank-${rec.rank}">
+                <div class="role-info">
+                  <h3>${rec.roleInfo.name}</h3>
+                  <div class="match-score">${rec.score}% Match</div>
+                  <div class="description">${rec.explanation}</div>
+                  <div class="skills-section">
+                    <div class="skills-title">Key Skills:</div>
+                    <div class="skills-list">
+                      ${rec.roleInfo.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                    </div>
+                  </div>
+                </div>
+                <div class="rank-badge">${rec.rank}</div>
+              </div>
+            `).join('')}
+          </div>
+          
+          <div class="footer">
+            <p>RoleMatch - Intelligent Team Role Assessment</p>
+            <p>CS673 Software Engineering • Boston University</p>
+          </div>
+        </body>
+      </html>
+    `;
+    
+    printWindow.document.write(printContent);
+    printWindow.document.close();
+    
+    // Wait for content to load, then print
+    printWindow.onload = () => {
+      setTimeout(() => {
+        printWindow.print();
+        printWindow.close();
+      }, 250);
+    };
   };
 
   const shareResults = async () => {
