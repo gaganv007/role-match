@@ -2115,7 +2115,7 @@ const RoleMatch = () => {
               <h2 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '16px', color: theme.primary }}>Our Team</h2>
               <ul style={{ listStyle: 'none', padding: 0, color: theme.onSurfaceVariant }}>
                 <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Gagan Veginati</strong> - Software Designer and Developer</li>
-                <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Swamy Tuttagunta</strong> - Software Developer, Team Lead</li>
+                <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Swamy Tuttagunta</strong> - Software Developer</li>
                 <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Yuqing Zheng</strong> - UX Developer</li>
                 <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Brady Wu</strong> - Software Tester</li>
                 <li style={{ marginBottom: '8px', lineHeight: '1.6' }}>• <strong>Paul Mulroney</strong> - Project Manager</li>
