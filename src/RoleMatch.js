@@ -172,7 +172,7 @@ const RoleMatch = () => {
       type: "single",
       weight: 3.0,
       options: [
-        { text: "Writing clear instructions or outlining requirements", points: { RE: 3 }, roleKey: 'RE' },
+        { text: "Writing clear instructions and outlining requirements", points: { RE: 3 }, roleKey: 'RE' },
         { text: "Organizing tools, files, and project structure", points: { CM: 3 }, roleKey: 'CM' },
         { text: "Planning how system parts connect and work together", points: { Design: 3 }, roleKey: 'Design' },
         { text: "Designing user interfaces and improving usability", points: { UX: 3 }, roleKey: 'UX' },
@@ -185,11 +185,11 @@ const RoleMatch = () => {
       type: "single",
       weight: 2.5,
       options: [
-        { text: "Requirement writer or researcher", points: { RE: 3 }, roleKey: 'RE' },
-        { text: "Repository/file manager", points: { CM: 3 }, roleKey: 'CM' },
-        { text: "Systems planner or diagram designer", points: { Design: 3 }, roleKey: 'Design' },
-        { text: "Interface or layout designer", points: { UX: 3 }, roleKey: 'UX' },
-        { text: "Tester or debugger", points: { Test: 3 }, roleKey: 'Test' }
+        { text: "Requirement writer", points: { RE: 3 }, roleKey: 'RE' },
+        { text: "Repository manager", points: { CM: 3 }, roleKey: 'CM' },
+        { text: "Systems designer", points: { Design: 3 }, roleKey: 'Design' },
+        { text: "Interface designer", points: { UX: 3 }, roleKey: 'UX' },
+        { text: "Tester", points: { Test: 3 }, roleKey: 'Test' }
       ]
     },
     {
@@ -206,11 +206,11 @@ const RoleMatch = () => {
     },
     {
       id: 4,
-      text: "What would you most enjoy improving or learning about?",
+      text: "What would you most enjoy learning about?",
       type: "single",
       weight: 1.5,
       options: [
-        { text: "Writing requirements or specifications", points: { RE: 2 }, roleKey: 'RE' },
+        { text: "Writing requirements and specifications", points: { RE: 2 }, roleKey: 'RE' },
         { text: "Managing shared tools and files", points: { CM: 2 }, roleKey: 'CM' },
         { text: "Designing system architecture", points: { Design: 2 }, roleKey: 'Design' },
         { text: "UI/UX design and accessibility", points: { UX: 2 }, roleKey: 'UX' },
@@ -223,11 +223,11 @@ const RoleMatch = () => {
       type: "multiple",
       weight: 1.0,
       options: [
-        { text: "Writing instructions or organizing project ideas", points: { RE: 1 }, roleKey: 'RE' },
+        { text: "Writing instructions and organizing project ideas", points: { RE: 1 }, roleKey: 'RE' },
         { text: "Keeping track of files, folders, and shared materials", points: { CM: 1 }, roleKey: 'CM' },
         { text: "Planning how different features work together", points: { Design: 1 }, roleKey: 'Design' },
         { text: "Designing how interfaces should look and feel", points: { UX: 1 }, roleKey: 'UX' },
-        { text: "Finding problems or mistakes in systems", points: { Test: 1 }, roleKey: 'Test' }
+        { text: "Finding problems and mistakes in systems", points: { Test: 1 }, roleKey: 'Test' }
       ]
     },
     {
@@ -236,11 +236,11 @@ const RoleMatch = () => {
       type: "multiple",
       weight: 2.5,
       options: [
-        { text: "Wrote documents, outlines, or plans for projects", points: { RE: 1 }, roleKey: 'RE' },
+        { text: "Wrote documents, outlines, and plans for projects", points: { RE: 1 }, roleKey: 'RE' },
         { text: "Helped keep files and folders organized", points: { CM: 1 }, roleKey: 'CM' },
         { text: "Drew diagrams to explain how something works", points: { Design: 1 }, roleKey: 'Design' },
-        { text: "Sketched website or app designs", points: { UX: 1 }, roleKey: 'UX' },
-        { text: "Found bugs or tested features", points: { Test: 1 }, roleKey: 'Test' }
+        { text: "Designed apps and websites", points: { UX: 1 }, roleKey: 'UX' },
+        { text: "Tested features and found bugs", points: { Test: 1 }, roleKey: 'Test' }
       ]
     },
     {
@@ -251,22 +251,22 @@ const RoleMatch = () => {
       options: [
         { text: "Writing documents that explain things clearly", points: { RE: 1 }, roleKey: 'RE' },
         { text: "Keeping files and content neat and organized", points: { CM: 1 }, roleKey: 'CM' },
-        { text: "Planning visuals or system structures", points: { Design: 1 }, roleKey: 'Design' },
+        { text: "Planning visuals and system structures", points: { Design: 1 }, roleKey: 'Design' },
         { text: "Making interfaces simple and easy to use", points: { UX: 1 }, roleKey: 'UX' },
         { text: "Catching small details others might miss", points: { Test: 1 }, roleKey: 'Test' }
       ]
     },
     {
       id: 8,
-      text: "Which tools or platforms have you used?",
+      text: "Which tasks have you done before in a group setting?",
       type: "multiple",
       weight: 1.0,
       options: [
-        { text: "Written instructions or documentation", points: { RE: 1 }, roleKey: 'RE' },
-        { text: "Managed files or versions in group settings", points: { CM: 1 }, roleKey: 'CM' },
-        { text: "Created flowcharts or system diagrams", points: { Design: 1 }, roleKey: 'Design' },
-        { text: "Designed visual layouts or presentations", points: { UX: 1 }, roleKey: 'UX' },
-        { text: "Logged issues or verified test results", points: { Test: 1 }, roleKey: 'Test' }
+        { text: "Written instructions and documentation", points: { RE: 1 }, roleKey: 'RE' },
+        { text: "Managed files and versions", points: { CM: 1 }, roleKey: 'CM' },
+        { text: "Created flowcharts and system diagrams", points: { Design: 1 }, roleKey: 'Design' },
+        { text: "Designed visual layouts", points: { UX: 1 }, roleKey: 'UX' },
+        { text: "Logged issues and verified test results", points: { Test: 1 }, roleKey: 'Test' }
       ]
     },
     {
@@ -277,7 +277,7 @@ const RoleMatch = () => {
       options: [
         { text: "I help teammates understand requirements", points: { RE: 2 }, roleKey: 'RE' },
         { text: "I enjoy organizing to-do lists and folders", points: { CM: 2 }, roleKey: 'CM' },
-        { text: "I notice when designs or interfaces feel off", points: { UX: 2, Design: 1 }, roleKey: 'UX' },
+        { text: "I notice when designs and interfaces feel off", points: { UX: 2, Design: 1 }, roleKey: 'UX' },
         { text: "I think through edge cases and scenarios", points: { Test: 2, Design: 1 }, roleKey: 'Test' },
         { text: "I often write instructions for others", points: { RE: 2, CM: 1 }, roleKey: 'RE' }
       ]
@@ -301,10 +301,10 @@ const RoleMatch = () => {
       type: "single",
       weight: 2.0,
       options: [
-        { text: "Writing up steps or requirements", points: { RE: 2 }, roleKey: 'RE' },
+        { text: "Writing up steps and requirements", points: { RE: 2 }, roleKey: 'RE' },
         { text: "Organizing files and documentation", points: { CM: 2 }, roleKey: 'CM' },
         { text: "Creating system diagrams", points: { Design: 2 }, roleKey: 'Design' },
-        { text: "Making visual layouts or mockups", points: { UX: 2 }, roleKey: 'UX' },
+        { text: "Making visual layouts", points: { UX: 2 }, roleKey: 'UX' },
         { text: "Finding issues and ensuring quality", points: { Test: 2 }, roleKey: 'Test' }
       ]
     },
